@@ -4,7 +4,6 @@ setup_soft_app() {
 
 	sudo yum update -y
 	sudo setenforce 0
-
 	sudo yum install epel-release -y
 	sudo rpm -Uvh http://rpms.famillecollet.com/enterprise/remi-release-7.rpm
 	sudo rpm -Uvh http://repo.mysql.com/mysql-community-release-el7-7.noarch.rpm
@@ -51,15 +50,12 @@ systemctl restart httpd
 
 change_config_database() {
 
-
 sudo sed -i -e "s/'type'       => 'MySQL'/'type'       => 'PDO'/g" /var/www/dtester/dt-api/application/config/database.php
 sudo sed -i -e "s/'hostname'   => 'localhost'/'hostname'   => '10.164.0.10'/g" /var/www/dtester/dt-api/application/config/database.php
 sudo sed -i -e "s/'database'   => 'dtapi2'/'database'   => 'dtesterav'/g" /var/www/dtester/dt-api/application/config/database.php
 sudo sed -i -e "s/'username'   => 'dtapi'/'username'   => 'userdt'/g" /var/www/dtester/dt-api/application/config/database.php
 sudo sed -i -e "s/'password'   => 'dtapi'/'password'   => '6f+w4PXyboSHaI='/g" /var/www/dtester/dt-api/application/config/database.php
-
 sudo sed -i -e "s/'dsn'        => 'mysql:host=192.168.33.100;dbname=dtapi2;charset=utf8'/'dsn'        => 'mysql:host=10.164.0.10;dbname=dtesterav;charset=utf8'/g" /var/www/dtester/dt-api/application/config/database.php
-
 sudo sed -i -e "s/'username'   => 'username'/'username'   => 'userdt'/g" /var/www/dtester/dt-api/application/config/database.php
 sudo sed -i -e "s/'password'   => 'passwordQ1@'/'password'   => '6f+w4PXyboSHaI='/g" /var/www/dtester/dt-api/application/config/database.php
 
@@ -74,7 +70,6 @@ setup_environment() {
 	sudo chown -R apache:apache -R /var/www/dtester/
 	sudo chmod 766 -R /var/www/dtester/
 }
-
 
 setup_soft_app
 setup_server_app
