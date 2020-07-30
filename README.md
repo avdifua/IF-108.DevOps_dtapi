@@ -23,15 +23,15 @@ Prior to using this plugin, you will first need to make sure you have a Google C
 What do you have to change in vagrant file.
 Example:
    
-google.google_project_id = "sofserv-if" - Project ID
-google.google_json_key_location = "/home/al/Vagrant/sofserv-if-123573ea618.json" - path to JSON
+	google.google_project_id = "sofserv-if" - Project ID
+	google.google_json_key_location = "/home/al/Vagrant/sofserv-if-123573ea618.json" - path to JSON
 	
-override.ssh.username = "al" - name in linux system
-override.ssh.private_key_path = "~/.ssh/virtual_home" - path where stored keys
+	override.ssh.username = "al" - name in linux system
+	override.ssh.private_key_path = "~/.ssh/virtual_home" - path where stored keys
 
 For running the creation of instances:
 
-vagrant up --provider=google
+	vagrant up --provider=google
 
 If you want to change Region your instances.
 Look here - > VPC networks in Google cloud and choose correct IP address ranges
