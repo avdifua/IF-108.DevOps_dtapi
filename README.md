@@ -14,12 +14,13 @@ Still on the same page, click on Manage service accounts link to go to IAM conso
 Add the SSH key you're going to use to GCE Metadata in Compute -> Compute Engine -> Metadata section of the console, SSH Keys tab. (Read the SSH Support readme section for more information.)
 
 Example:
-    google.google_project_id = "sofserv-if" - Project ID
+   
+    		google.google_project_id = "sofserv-if" - Project ID
 		google.google_json_key_location = "/home/al/Vagrant/sofserv-if-123573ea618.json" - path to JSON
-    
-    override.ssh.username = "al" - name in linux system
+		
+		override.ssh.username = "al" - name in linux system
 		override.ssh.private_key_path = "~/.ssh/virtual_home" - path where stored keys
- 
+	
 If you want to change Region your instances.
 Look here - > VPC networks in Google cloud and choose correct IP address ranges
    
