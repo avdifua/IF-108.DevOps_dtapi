@@ -1,5 +1,4 @@
-# IF-108.DevOps_1week
-Deploying the app dtapi.if.ua in google cloud.
+## Deploying the app dtapi.if.ua in google cloud.
 
 For first, thanks to Misha Navrotsky for example vagrant code!
 
