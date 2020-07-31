@@ -14,7 +14,7 @@ Vagrant.configure("2") do |config|
 		override.ssh.private_key_path = "~/.ssh/virtual_home"
 		
 		google.zone_config "europe-west4-a" do |db1_zone|
-			db1_zone.name = "PHP-app-mysql"
+			db1_zone.name = "php-app-mysql"
 			db1_zone.image_family = "centos-7"
 			db1_zone.disk_size = "20"
 			db1_zone.network_ip = "10.164.0.10"
@@ -37,7 +37,7 @@ Vagrant.configure("2") do |config|
 		override.ssh.private_key_path = "~/.ssh/virtual_home"
 		
 		google.zone_config "europe-west4-a" do |app1_zone|
-			app1_zone.name = "PHP-fe-be-app"
+			app1_zone.name = "php-fe-be-app"
 			app1_zone.image_family = "centos-7"
 			app1_zone.disk_size = "20"
 			app1_zone.network_ip = "10.164.0.20"
