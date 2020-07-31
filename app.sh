@@ -17,7 +17,7 @@ setup_soft_app() {
 
 setup_server_app() {
 
-	git clone https://github.com/avvppro/IF-108.git
+	git clone https://github.com/protos-kr/IF-108.git
 	sudo mkdir IF-108/task1/dtester/dt-api/application/logs IF-108/task1/dtester/dt-api/application/cache
 	sudo chmod 766 IF-108/task1/dtester/dt-api/application/logs
 	sudo chmod 766 IF-108/task1/dtester/dt-api/application/cache
