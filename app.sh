@@ -1,6 +1,6 @@
 #!/bin/bash
 
-setup_soft_app() {
+install_soft() {
 
 	sudo yum update -y
 	sudo setenforce 0
@@ -71,7 +71,7 @@ setup_environment() {
 	sudo chmod 766 -R /var/www/dtester/
 }
 
-setup_soft_app
+install_soft
 setup_server_app
 setup_virtual_host
 change_config_database
