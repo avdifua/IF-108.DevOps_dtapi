@@ -7,7 +7,7 @@ get_temporary_password() {
 }
 
 setup_mysql() {
-
+sudo su
 root_db_pass="3osqiN7NDS!%8dGkE"
 user_db_pass="6f+w4PXyboSHaI="
 echo -e "[client]\npassword=$temp_pass" > ~/.my.cnf
